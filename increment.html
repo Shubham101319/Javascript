@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 60vh;
+            width: 60vw;
+            background-color: aquamarine;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .btncontainer{
+            margin-top: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <h1 >Counter</h1>
+        <h1 id="Zero"></h1>
+        <div class="btncontainer" >
+            <button
+             id="BOX1">Increment</button>
+            <button id="BOX2">Reset</button>
+            <button id="Box3">Decrement</button>
+        </div>
+    </div>
+    <script>
+        let Zero = document.getElementById('Zero');
+        let BOX1 = document.getElementById('BOX1');
+        let BOX2 = document.getElementById('BOX2');
+        let BOX3 = document.getElementById('BOX3');
+        let Counter = 0;
+        Zero.innerText = Counter;
+        BOX1.addEventListener('click', function(){
+            console.log(Counter);
+            Counter < 20 && Counter++;
+            Zero.innerText = Counter;
+        })
+        BOX2.addEventListener('click', function(){
+            counter = 0;
+            Zero.innerText = counter;
+        })
+        BOX3.addEventListener('click', function(){
+            Counter > 0 && Counter--;
+            Zero.innerText = Counter;
+        })
+    </script>
+</body>
+</html>

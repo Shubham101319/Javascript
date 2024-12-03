@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      border: 2px solid black;
+      margin: auto;
+      margin-top: 20px;
+      height: 70vh;
+      width: 80vw;
+      display: grid;
+      place-content: center;
+    }
+    .img-container{
+      height: 150px;
+      /* width: 100px; */
+    }
+    img{
+      height: 100%;
+    }
+    .btn-container{
+      text-align: center;
+      margin-top: 15px;
+    }
+    button{
+      width: 70px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="img-container"><img src="./bulbOff.png" alt="" id="img"></div>
+    <div class="btn-container"><button id="btn">ON</button></div>
+  </div>
+  <script>
+    let btn = document.getElementById('btn');
+    let bulb = document.getElementById('img');
+    btn.addEventListener('click',function(){
+     bulb.src == 'http://127.0.0.1:5501/bulbOff.png' ? (bulb.src = './bulbOn.png',btn.innerText = 'OFF'):(bulb.src = './bulbOff.png',btn.innerText = 'ON');
+    })
+  </script>
+</body>
+</html>

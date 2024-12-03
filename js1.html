@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    
+    <div class="container">
+      <input type="checkbox" id="check" name="click"> <label for="check">Check Me</label>
+      
+      <!-- <input type="radio" id="check" name="click" checked> <label for="check">Check Me</label> -->
+      <!-- <input type="radio" id="check2" name="click"> <label for="check2">Check Me</label>
+      <input type="radio" id="check3" name="click"> <label for="check3">Check Me</label> -->
+
+    </div>
+
+    <div id="show"></div>
+<button onclick="handleClick()">Click Me</button>
+    <!-- <script src="./test.js"></script> -->
+     <script>
+      let checkbox = document.getElementById('check');
+      let show = document.getElementById('show');
+      const handleClick = () => {
+        checkbox.checked ? show.innerText = 'You checked the checkbox'
+                        : show.innerText = `You haven't checked the checkbox`
+      }
+     </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 70vh;
+            width: 50vw;
+            background-color: aquamarine;
+            border: 1ps solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+        
+        }
+        .value{
+            margin-top: 3%;
+            font-size: 20px;
+
+        }
+        .radio{
+            margin-top: 4%;
+            font-size: 15px;
+        }
+        .form{
+            margin-top: 4%;
+        }
+        #result{
+            margin: 4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temprature Converter</h1>
+        <div class="value"><label for="enter">Enter value :</label><input type="number" name="boy" id="enter">
+            
+        </div>
+        <div class="radio">
+        <input type="radio"name="click" id="click" checked><label for="click">Convert F→C</label><br>
+        <input type="radio"name="click" id="click1"><label for="click1">Convert C→F</label>
+        </div>
+        <div class="form">
+            <button id="button">Convert</button>
+          </div>
+          <div id="result">Result→
+          </div>
+    </div>
+    <script>
+    let enter = document.getElementById("enter");
+    let click = document.getElementById("click");
+    let click1 = document.getElementById("click1");
+    let button = document.getElementById("button")
+    let output = document.getElementById("result");
+    button.addEventListener("click", function() {
+    let result;
+    if(enter.value == "") alert("Enter the value");
+    else if(click.checked) {
+        result = 5*(enter.value - 32)/9;
+        output.innerHTML =`${result.toFixed(2)}<sup>o</sup>C`;
+    }
+    else{
+        result = (9*enter.value)/5 + 32;
+        output.innerHTML = `${result.toFixed(2)}<sup>o</sup>F`;
+    };
+    
+});
+    </script>
+</body>
+</html>

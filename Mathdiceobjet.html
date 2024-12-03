@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+.container {
+    text-align: center;
+    border: 2px solid black;
+    height: 70vh;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: aquamarine;
+
+    
+
+}
+.h1{
+    margin: auto;
+    
+}
+.box {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+
+.dice {
+    border: 2px solid #333;
+    border-radius: 2px;
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Roll the dice</h1>
+        <button id="rollButton">Roll</button>
+        <div class="box">
+            <div class="dice" id="dice1">Dice1</div>
+            <div class="dice" id="dice2">Dece2</div>
+            <div class="dice" id="dice3">Dice3</div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    document.getElementById('rollButton').addEventListener('click', function() {
+    const dice1 = Math.floor(Math.random() * 6) + 1;
+    const dice2 = Math.floor(Math.random() * 6) + 1;
+    const dice3 = Math.floor(Math.random() * 6) + 1;
+
+    document.getElementById('dice1').textContent = dice1;
+    document.getElementById('dice2').textContent = dice2;
+    document.getElementById('dice3').textContent = dice3;
+});
+
+</script>
+</html>

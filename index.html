@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="fruit">
+    <li>Apple</li>
+    <li>Grapes</li>
+    <li>Guava</li>
+  </ul>
+  <ul id="vegetable">
+    <li>Jackfruit</li>
+    <li>Bitterguard</li>
+    <li id="cucumber">Cucumber</li>
+  </ul>
+  <ul id="dessert">
+    <li>ice cream</li>
+    <li>rosgulla</li>
+    <li>pineapple pie</li>
+  </ul>
+</body>
+<script>
+ 
+ let vegetable = document.getElementById('vegetable');
+
+//  vegetable.previousElementSibling.style.backgroundColor = 'Yellow';
+//  vegetable.previousElementSibling.style.color = 'red';
+
+// vegetable.style.backgroundColor = "red"
+
+//  vegetable.nextElementSibling.style.backgroundColor = 'black';
+//  vegetable.nextElementSibling.style.color = 'white';
+
+vegetable.firstElementChild.style.color = "red";
+vegetable.lastElementChild.style.color = "red";
+
+let li = document.createElement('li');
+
+li.className = "createdLi";
+li.id = 'Li';
+
+li.textContent = "This is li created from JS";
+// document.getElementById('cucumber').append(li);
+document.getElementById('cucumber').prepend(li);
+
+// document.body.prepend(li);
+// document.body.append(li);
+
+
+
+
+
+
+// let div1 = document.getElementById('div');
+// let div = document.getElementsByClassName('div');
+// let div = document.getElementsByTagName('div');
+// let div = document.querySelector('.div #my');
+// let div = document.querySelectorAll('.div');
+// console.log(div)
+// console.log(div.length);
+// for(let myDiv of div){
+//   console.log(myDiv)
+// }
+// div.forEach(e=>{
+//   console.log(e);
+// })
+// console.log(div);
+// for(let myDiv of div){
+//  myDiv.style.backgroundColor = 'yellow';
+// }
+// let arr = Array.from(div);
+// arr.forEach(element => {
+//   console.log(element);
+// });
+// console.log(div);
+
+
+</script>
+</html>

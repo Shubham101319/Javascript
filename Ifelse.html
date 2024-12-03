@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function checkeligibility(percent){
+        let str = '';
+        if (percent>100 && percent<=111) str +=`This is not valid percent`;
+        else if (percent>=90 && percent<=100) str +=`Grade A`;
+       else if (percent>=60 && percent<=89) str +=`Grade B`;
+       else if (percent>=50 && percent<=59) str +=`Grade C`;
+        else if (percent>=33 && percent<=49) str +=`Grade D`;
+        else if (percent>=0 && percent<=33) str +=`You are fail`;
+        else str +=`Are you mad this is not valid percent`
+        return str;
+    }
+    </script>
+</body>
+</html>
